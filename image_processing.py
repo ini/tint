@@ -129,3 +129,4 @@ def lab_to_rgb(lab):
             srgb_pixels = (rgb_pixels * 12.92 * linear_mask) + ((rgb_pixels ** (1/2.4) * 1.055) - 0.055) * exponential_mask
 
         return tf.reshape(srgb_pixels, tf.shape(lab))
+

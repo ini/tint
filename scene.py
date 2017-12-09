@@ -19,3 +19,4 @@ def scene_info(paths):
 		import resnet.resnet_model
 		np_scene_info = np.array([resnet.resnet_model.get_scene_info(path) for path in paths])
 	return tf.convert_to_tensor(np_scene_info, dtype=tf.float32)
+

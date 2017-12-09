@@ -41,3 +41,4 @@ def get_scene_info(path, useGPU=True):
     logit = model.forward(input_img)
     h_x = F.softmax(logit).data.squeeze()
     return h_x.numpy()
+

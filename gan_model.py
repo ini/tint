@@ -227,3 +227,4 @@ def create_model(args, scenes, inputs, targets):
         outputs=outputs,
         train=tf.group(update_losses, incr_global_step, gen_train),
     )
+
