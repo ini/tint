@@ -16,7 +16,7 @@ def scene_info(paths):
 	try:
 		np_scene_info = np.array([np.eye(NUM_CATEGORIES)[category(path)] for path in paths])
 	except:
-		import resnet.resnet_model
-		np_scene_info = np.array([resnet.resnet_model.get_scene_info(path) for path in paths])
+		import resnet_model
+		np_scene_info = np.array([resnet_model.get_scene_info(path) for path in paths])
 	return tf.convert_to_tensor(np_scene_info, dtype=tf.float32)
 
